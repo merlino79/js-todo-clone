@@ -10,13 +10,18 @@ $(document).ready(function() {
 
     ];
 
+    // ciclo array
 
     for (var i = 0; i < arrTodo.length; i++) {
         var strTodo = arrTodo[i];
         console.log(strTodo);
 
-        var strHtml = '<li><p>' + strTodo + '</p> <i class="fas fa-trash-alt"></i> </li>';
-        $('.app ul').append(strHtml); //stampo a video
+        //     var strHtml = '<li><p>' + strTodo + '</p> <i class="fas fa-trash-alt"></i> </li>';
+        //     $('.app ul').append(strHtml); 
+        //stampo a video
+
+        var item = $('.template li').clone();
+        $(item).find('.text').append(strTodo);
 
 
 
@@ -25,6 +30,9 @@ $(document).ready(function() {
 
 
     }
+
+    //fine prima soluzione
+    // soluzione due con js
 
 
 
