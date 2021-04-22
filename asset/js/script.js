@@ -24,7 +24,7 @@ $(document).ready(function() {
         var item = $('.template li').clone();
         $(item).find('.text').append(strTodo);
 
-        $('.app ul').append(item);
+        //$('.app ul').append(item);
 
     }
 
