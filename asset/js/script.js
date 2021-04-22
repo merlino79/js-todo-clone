@@ -43,13 +43,16 @@ $(document).ready(function() {
     $('.app input').keyup(function(event) {
         console.log(event.which); //intercetto i tasti scritti //il tasto invio corrisponde al 13
         if (event.which === 13) {
+
+            var strTodo = $(this).val().trim();
             console.log($('.app input').val()); //stampo alla consol.log l'imput inserito
-            if ($(this).val().length > 3) {
+            if (strTodo.length > 3) {
                 //console.log($(this).val());
                 var item = $('.template li').clone();
                 $(item).find('.text').append($(this).val());
 
                 $('.app ul').append($(item));
+                $(this).val(''); //stampo la scrittura del testo 
 
             }
         }
